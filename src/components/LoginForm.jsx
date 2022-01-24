@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { Route } from "react-router-dom";
 
 const projectID = "e9085cef-870a-4a5f-b2e3-5ad5c94bb72f";
 
@@ -59,6 +60,18 @@ const Modal = () => {
             </button>
           </div>
         </form>
+        <div style={{ marginLeft: '150px' }}>
+          Not a User? <Route render={({ history }) => (
+            <button
+              id='signup'
+              type='button'
+              onClick={() => { history.push('/SignUp') }}
+            >
+              SignUp
+            </button>
+          )} />
+          
+        </div>
         <h1>{error}</h1>
       </div>
     </div>
