@@ -19,7 +19,7 @@ function SignUp() {
             },
             data: data
         };
-
+        var flag=1;
         axios(config)
             .then(function (response) {
                 console.log(JSON.stringify(response.data));
@@ -29,9 +29,19 @@ function SignUp() {
                 {
                     console.log(error)
                     alert("Username Already Exists. Try different username and password")
+                    flag=0;
                 }
+                
             });
-        alert("Registration Successful")
+           
+            setTimeout(() => {
+                if(flag===1)
+                {
+                    alert("Registration Successful")
+                }
+            }, 1000);
+           
+        
     }
     return (
        
@@ -39,20 +49,24 @@ function SignUp() {
             <div className="wrapper2">
                 <form action="" id="loginform">
                     <div>
-                        <label htmlFor="username">Username</label>
-                        <input type="text" id='username' required value={username}
+                        <h1 className="signuptitle">Lets Talk</h1>
+                        <label style={{marginLeft: '18px',fontSize:'22px' }} htmlFor="username">Username</label>
+                        <input type="text" placeholder="Enter UserName" className="input2" required value={username}
                                onChange={(e) => setUsername(e.target.value)} />
                     </div>
                     <div>
-                        <label htmlFor="password">Password</label>
-                    <input type="password" id='password'required value={password}
+                        <label style={{marginLeft: '18px',fontSize:'22px'}} htmlFor="password">Password</label>
+                    <input type="password" className="input2" placeholder="Enter Password" required value={password}
                            onChange={(e) => setPassword(e.target.value)} />
                     </div>
-                    <button style={{ marginLeft: '180px' }} onClick={handleclick} type='button' id='submitbtn'>SignUp</button>
+                    <button style={{ marginLeft: '16px' }} onClick={handleclick} type='button' className='signupbtn'>SignUp</button>
                     <br />
-                    Back to
+                    <br />
+                    <br />
+                      <div style={{marginLeft:'65px'}}>
+                          Back to
                     <Route render={({ history }) => (
-                        <button
+                        <button style={{marginLeft:'10px' }}
                             id='login'
                             type='button'
                             onClick={() => { history.push('/') }}
@@ -60,6 +74,7 @@ function SignUp() {
                             Login
                         </button>
                     )} />
+                    </div>
                 </form>
             </div>
         </>

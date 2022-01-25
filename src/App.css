@@ -96,6 +96,14 @@
   padding-top: 4px;
   
 }
+.signuptitle{
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-bottom: 30px;
+  width: 100%;
+  font-size: 2.3em;
+  font-style: italic;
+}
 #signup{
     width: 25%;
     height: 30px;
@@ -106,6 +114,17 @@
     font-size: 17px;
     font-weight: 600;
     cursor: pointer
+}
+#login{
+  width: 25%;
+  height: 30px;
+  margin-right: 7px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1be66f;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer
 }
 .message-row {
   float: left;
@@ -228,7 +247,6 @@
 .wrapper {
   height: 100vh;
     width: 100%;
-  /*background: rgb(117,84,160);*/
   background: linear-gradient(to right, rgb(241, 242, 181), rgb(19, 80, 88));
   display: flex;
   justify-content: center;
@@ -236,9 +254,8 @@
 }
 .wrapper2{
   height: 100vh;
-    width: 100%;
-  /*background: rgb(117,84,160);*/
-  background: linear-gradient(to right, rgb(241, 242, 181), rgb(19, 80, 88));
+  width: 100%;
+  background: linear-gradient(to right, rgb(52, 148, 230), rgb(236, 110, 173));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -259,10 +276,40 @@
   margin-bottom: 25px;
 }
 
+.input2 {
+  color: #333;
+  font-size: 1.2rem;
+    margin: 0 auto;
+  padding: 1.5rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 90%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+  outline: none;
+  margin-bottom: 25px;
+}
 .form {
   width: 400px;
 }
-
+.signupbtn{
+  border-radius: 4px;
+  border: none;
+  background-color: rgb(8, 2, 2);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+  padding: 20px;
+  width: 150px;
+  transition: all 0.4s;
+  cursor: pointer;
+  margin: 5px;
+  width: 90%;
+  font-style: italic;
+}
 .title {
   text-align: center;
   color: rgb(255, 255, 255);
@@ -272,7 +319,6 @@
   font-style: italic;
   
 }
-
 .button {
   border-radius: 4px;
   border: none;
