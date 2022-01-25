@@ -101,7 +101,7 @@
   color: rgb(255, 255, 255);
   margin-bottom: 30px;
   width: 100%;
-  font-size: 2.3em;
+  font-size: 2.8em;
   font-style: italic;
 }
 #signup{
@@ -110,7 +110,7 @@
     margin-right: 7px;
     border: none;
     border-radius: 5px;
-    background-color: #10a4be;
+    background-color: #11c6e6;
     font-size: 17px;
     font-weight: 600;
     cursor: pointer
@@ -315,7 +315,7 @@
   color: rgb(255, 255, 255);
   margin-bottom: 30px;
   width: 100%;
-  font-size: 2.3em;
+  font-size: 2.8em;
   font-style: italic;
   
 }

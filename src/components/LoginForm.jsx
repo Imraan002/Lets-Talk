@@ -37,6 +37,8 @@ const Modal = () => {
     <div className="wrapper">
       <div className="form">
         <h1 className="title">Let's Talk</h1> 
+        <h3 style={{marginLeft:'120px',color:"black"}}>Talk.Share.Relax</h3>
+        <br />
         <form onSubmit={handleSubmit}>
           <input
             type="text"

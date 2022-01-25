@@ -49,8 +49,8 @@ function SignUp() {
             <div className="wrapper2">
                 <form action="" id="loginform">
                     <div>
-                        <h1 className="signuptitle">Lets Talk</h1>
-                        <label style={{marginLeft: '18px',fontSize:'22px' }} htmlFor="username">Username</label>
+                        <h1 className="signuptitle">Let's Talk</h1>
+                        <label style={{marginLeft: '18px',fontSize:'25px' }} htmlFor="username">Username</label>
                         <input type="text" placeholder="Enter UserName" className="input2" required value={username}
                                onChange={(e) => setUsername(e.target.value)} />
                     </div>
