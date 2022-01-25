@@ -234,7 +234,15 @@
   justify-content: center;
   align-items: center;
 }
-
+.wrapper2{
+  height: 100vh;
+    width: 100%;
+  /*background: rgb(117,84,160);*/
+  background: linear-gradient(to right, rgb(241, 242, 181), rgb(19, 80, 88));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .input {
   color: #333;
   font-size: 1.2rem;

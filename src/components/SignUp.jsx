@@ -1,23 +1,16 @@
-import React,{useRef} from 'react';
 import { Route } from "react-router-dom";
+import { useState } from "react";
 function SignUp() {
-    const username=useRef('null');
-    const password=useRef('null');
-     const name=username.current.value;
-     const secret=password.current.value;
-    const obj={
-        "username":name,
-        "secret":secret
-    }
-   // const t=JSON.stringify(obj);
+    const [username, setUsername] = useState("");
+   const [password, setPassword] = useState("");
     const handleclick = () => {
-        console.log(obj);
         var axios = require('axios');
-        var data = {
-            "username":(name),
-            "secret":(secret)
+        const data = {
+            "username": username,
+            "secret": password,
+            
         };
-
+       
         var config = {
             method: 'post',
             url: 'https://api.chatengine.io/users/',
@@ -32,9 +25,13 @@ function SignUp() {
                 console.log(JSON.stringify(response.data));
             })
             .catch(function (error) {
-                console.log(error);
+                if(error)
+                {
+                    console.log(error)
+                    alert("Username Already Exists. Try different username and password")
+                }
             });
-        alert("You are Successfully Registered!!")
+        alert("Registration Successful")
     }
     return (
        
@@ -43,11 +40,13 @@ function SignUp() {
                 <form action="" id="loginform">
                     <div>
                         <label htmlFor="username">Username</label>
-                        <input type="text" id='username' ref={username}/>
+                        <input type="text" id='username' required value={username}
+                               onChange={(e) => setUsername(e.target.value)} />
                     </div>
                     <div>
                         <label htmlFor="password">Password</label>
-                    <input type="password" id='password' ref={password}/>
+                    <input type="password" id='password'required value={password}
+                           onChange={(e) => setPassword(e.target.value)} />
                     </div>
                     <button style={{ marginLeft: '180px' }} onClick={handleclick} type='button' id='submitbtn'>SignUp</button>
                     <br />
