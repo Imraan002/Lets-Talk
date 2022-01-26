@@ -14,7 +14,7 @@ const TheirMessage = ({ lastMessage, message }) => {
       )}
       {message.attachments && message.attachments.length > 0 ? (
        <div>
-         <div style={{fontSize:10,color:'blue',marginLeft:'150px'}}>
+         <div style={{fontSize:10,color:'blue',marginLeft:'120px'}}>
           {message.sender.username}
         </div>
         <img
