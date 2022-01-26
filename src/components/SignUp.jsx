@@ -2,7 +2,7 @@ import { Route } from "react-router-dom";
 import { useState } from "react";
 function SignUp() {
     const [username, setUsername] = useState("");
-   const [password, setPassword] = useState("");
+    const [password, setPassword] = useState("");
     const handleclick = () => {
         var axios = require('axios');
         const data = {
@@ -28,7 +28,7 @@ function SignUp() {
                 if(error)
                 {
                     console.log(error)
-                    alert("Username Already Exists. Try different username and password")
+                    alert("Username Already Exists😢. Try different username and password")
                     flag=0;
                 }
                 
@@ -37,7 +37,7 @@ function SignUp() {
             setTimeout(() => {
                 if(flag===1)
                 {
-                    alert("Registration Successful")
+                    alert("Registration Successful ✔\nThanks for registering😊\nWith Regards---Imraan💖 ")
                 }
             }, 1000);
            
